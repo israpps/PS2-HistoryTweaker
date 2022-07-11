@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PS2-HistoryTweaker" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_tdm-32bits" />
+		<Build>
+			<Target title="Debug">
+				<Option output="_build/Debug/PS2-HistoryTweaker" prefix_auto="1" extension_auto="1" />
+				<Option object_output="_obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_tdm-32bits" />
+				<Option use_console_runner="0" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/lib/gcc_lib/mswu" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/lib/gcc_lib/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30u.a" />
+					<Add library="libwxpng.a" />
+					<Add library="libwxjpeg.a" />
+					<Add library="libwxtiff.a" />
+					<Add library="libwxzlib.a" />
+					<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/lib/gcc_lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="_build/Release/PS2-HistoryTweaker" prefix_auto="1" extension_auto="1" />
+				<Option object_output="_obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_tdm-32bits" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/lib/gcc_lib/mswu" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/lib/gcc_lib/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add library="libwxpng.a" />
+					<Add library="libwxjpeg.a" />
+					<Add library="libwxtiff.a" />
+					<Add library="libwxzlib.a" />
+					<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/lib/gcc_lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add option="-Wall" />
+			<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+			<Add library="libkernel32.a" />
+			<Add library="libuser32.a" />
+			<Add library="libgdi32.a" />
+			<Add library="libwinspool.a" />
+			<Add library="libcomdlg32.a" />
+			<Add library="libadvapi32.a" />
+			<Add library="libshell32.a" />
+			<Add library="libole32.a" />
+			<Add library="liboleaut32.a" />
+			<Add library="libuuid.a" />
+			<Add library="libcomctl32.a" />
+			<Add library="libwsock32.a" />
+			<Add library="libodbc32.a" />
+		</Linker>
+		<Unit filename="EntryManager.cpp" />
+		<Unit filename="EntryManager.h" />
+		<Unit filename="HistoryUtils.cpp" />
+		<Unit filename="HistoryUtils.h" />
+		<Unit filename="PS2_HistoryTweakerApp.cpp" />
+		<Unit filename="PS2_HistoryTweakerApp.h" />
+		<Unit filename="PS2_HistoryTweakerMain.cpp" />
+		<Unit filename="PS2_HistoryTweakerMain.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="wxsmith/EntryManager.wxs" />
+		<Unit filename="wxsmith/PS2_HistoryTweakerframe.wxs" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="PS2_HistoryTweakerApp.cpp" main="PS2_HistoryTweakerFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/PS2_HistoryTweakerframe.wxs" src="PS2_HistoryTweakerMain.cpp" hdr="PS2_HistoryTweakerMain.h" fwddecl="0" i18n="1" name="PS2_HistoryTweakerFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/EntryManager.wxs" src="EntryManager.cpp" hdr="EntryManager.h" fwddecl="0" i18n="1" name="EntryManager" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

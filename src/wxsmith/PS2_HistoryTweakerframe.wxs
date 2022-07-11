@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="PS2_HistoryTweakerFrame">
+		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="BoxSizer3" member="no">
+					<object class="sizeritem">
+						<object class="wxListCtrl" name="ID_LISTCTRL1" variable="EntryList" member="yes">
+							<size>872,436</size>
+							<extra_code>wxListItem col6;&#x0A;col6.SetId(COL__ENTRYNUMBER);&#x0A;col6.SetText( __(&quot;Entry number&quot;) );&#x0A;col6.SetWidth(110);&#x0A;EntryList-&gt;InsertColumn(COL__ENTRYNUMBER, col6);&#x0A;&#x0A;wxListItem col0;&#x0A;col0.SetId(COL__ENTRY);&#x0A;col0.SetText( __(&quot;Entry&quot;) );&#x0A;col0.SetWidth(180);//180&#x0A;EntryList-&gt;InsertColumn(COL__ENTRY, col0);&#x0A;&#x0A;// Add second column&#x0A;wxListItem col1;&#x0A;col1.SetId(COL__COUNT);&#x0A;col1.SetText( __(&quot;Launch count&quot;) );&#x0A;col1.SetWidth(100);&#x0A;EntryList-&gt;InsertColumn(COL__COUNT, col1);&#x0A;&#x0A;// Add third column&#x0A;wxListItem col2;&#x0A;col2.SetId(COL__MASK);&#x0A;col2.SetText( __(&quot;BitMask&quot;) );&#x0A;col2.SetWidth(100);&#x0A;EntryList-&gt;InsertColumn(COL__MASK, col2);&#x0A;&#x0A;// Add 4th column&#x0A;wxListItem col3;&#x0A;col3.SetId(COL__SHIFT);&#x0A;col3.SetText( __(&quot;ShiftAmount&quot;) );&#x0A;col3.SetWidth(100);&#x0A;EntryList-&gt;InsertColumn(COL__SHIFT, col3);&#x0A;&#x0A;wxListItem col4;&#x0A;col4.SetId(COL__PADDING);&#x0A;col4.SetText( __(&quot;padding&quot;) );&#x0A;col4.SetWidth(100);&#x0A;EntryList-&gt;InsertColumn(COL__PADDING, col4);&#x0A;&#x0A;wxListItem col5;&#x0A;col5.SetId(COL__DATE);&#x0A;col5.SetText( __(&quot;Date&quot;) );&#x0A;col5.SetWidth(110);&#x0A;EntryList-&gt;InsertColumn(COL__DATE, col5);&#x0A;&#x0A;</extra_code>
+							<style>wxLC_REPORT|wxLC_ALIGN_LEFT|wxLC_SINGLE_SEL|wxLC_HRULES</style>
+							<handler function="OnEntryListBeginDrag" entry="EVT_LIST_BEGIN_DRAG" />
+							<handler function="OnRefreshCounter" entry="EVT_LIST_DELETE_ITEM" />
+							<handler function="OnRefreshCounter" entry="EVT_LIST_DELETE_ALL_ITEMS" />
+							<handler function="OnEntryListItemRightClick" entry="EVT_LIST_ITEM_RIGHT_CLICK" />
+							<handler function="OnRefreshCounter" entry="EVT_LIST_INSERT_ITEM" />
+						</object>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="no">
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItem3" member="yes">
+					<label>Open</label>
+					<accel>F2</accel>
+					<handler function="OnOpenHistoryFileRequest" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM2" variable="MenuItem4" member="yes">
+					<label>Save</label>
+					<accel>F3</accel>
+					<handler function="OnSaveHistoryRequest" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>2</fields>
+			<widths>-100,-10</widths>
+			<styles>wxSB_NORMAL,wxSB_NORMAL</styles>
+		</object>
+		<object class="wxMenu" variable="EntryListMenu" member="yes">
+			<object class="wxMenuItem" name="ID_MENUITEM3" variable="MenuItem5" member="yes">
+				<label>Clear</label>
+				<handler function="OnClearEntryRequest" entry="EVT_MENU" />
+			</object>
+			<object class="wxMenuItem" name="ID_MENUITEM7" variable="MenuItem9" member="yes">
+				<label>Remove</label>
+				<handler function="OnRemoveEntryRequest" entry="EVT_MENU" />
+			</object>
+			<object class="wxMenuItem" name="ID_MENUITEM4" variable="MenuItem6" member="yes">
+				<label>Edit</label>
+				<handler function="OnentryEditRequest" entry="EVT_MENU" />
+			</object>
+			<object class="wxMenuItem" name="ID_MENUITEM5" variable="MenuItem7" member="yes">
+				<label>Copy</label>
+				<handler function="OnItemCopy" entry="EVT_MENU" />
+			</object>
+			<object class="wxMenuItem" name="ID_MENUITEM6" variable="CTXMenPaste" member="yes">
+				<label>Paste</label>
+				<enabled>0</enabled>
+				<handler function="OnItemPaste" entry="EVT_MENU" />
+			</object>
+		</object>
+	</object>
+</wxsmith>
