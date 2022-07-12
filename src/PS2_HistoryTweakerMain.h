@@ -23,7 +23,7 @@ class PS2_HistoryTweakerFrame: public wxFrame
 {
     public:
 
-        PS2_HistoryTweakerFrame(wxWindow* parent,wxWindowID id = -1);
+        PS2_HistoryTweakerFrame(wxWindow* parent, wxLocale& locale, wxWindowID id = -1);
         virtual ~PS2_HistoryTweakerFrame();
 		void RepopulateList(void);
     private:

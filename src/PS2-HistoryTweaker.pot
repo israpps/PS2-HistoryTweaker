@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-11 22:58-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: PS2_HistoryTweakerMain.cpp:179
+msgid "&File"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:181
+msgid "About\tF1"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:289
+msgid "All Histoy files"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:413 PS2_HistoryTweakerMain.cpp:424
+msgid "An error ocurred while saving the new file"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:289
+msgid "Any file"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:145
+msgid "BitMask"
+msgstr ""
+
+#: EntryManager.cpp:48
+msgid "Bitmask"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:289
+msgid "Choose history file"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:393
+msgid "Choose where to save the history file"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:191
+msgid "Clear"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:197
+msgid "Copy"
+msgstr ""
+
+#: PS2_HistoryTweakerApp.cpp:43
+#, c-format
+msgid ""
+"Couldn't find/load the 'PS2-HistoryTweaker' catalog for locale '%s'.\n"
+"The translation file must be placed here: \"Lang\\%s\\PS2-HistoryTweaker.mo\""
+msgstr ""
+
+#: EntryManager.cpp:63 PS2_HistoryTweakerMain.cpp:164
+msgid "Date"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:195
+msgid "Edit"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:131
+msgid "Entry"
+msgstr ""
+
+#: EntryManager.cpp:38
+msgid "Entry name"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:125
+msgid "Entry number"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:413 PS2_HistoryTweakerMain.cpp:424
+msgid "FATAL ERROR"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:183
+msgid "Help"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:302
+msgid "IO error"
+msgstr ""
+
+#: EntryManager.cpp:43 PS2_HistoryTweakerMain.cpp:138
+msgid "Launch count"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:173
+msgid "Open\tF2"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:235
+msgid ""
+"PS2 History Tweaker.\n"
+"Created by Matias israelson (AKA: El_isra)\n"
+"This software is free to use and open source:\n"
+"https://github.com/israpps/PS2-HistoryTweaker"
+msgstr ""
+
+#: EntryManager.cpp:58
+msgid "Padding"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:199
+msgid "Paste"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:177
+msgid "Quit\tAlt-F4"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:177
+msgid "Quit the application"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:331
+#, c-format
+msgid "Registered entries: %d"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:193
+msgid "Remove"
+msgstr ""
+
+#: EntryManager.cpp:67
+msgid "Save"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:175
+msgid "Save\tF3"
+msgstr ""
+
+#: EntryManager.cpp:53
+msgid "Shift Ammount"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:152
+msgid "ShiftAmount"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:181
+msgid "Show info about this application"
+msgstr ""
+
+#: EntryManager.cpp:69
+msgid "Simulate Game execution"
+msgstr ""
+
+#: EntryManager.cpp:70
+msgid ""
+"The information is modified just like the console does when the game is "
+"loaded\n"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:298
+#, c-format
+msgid ""
+"The loaded history file doesn't have 21 entries (ie: %d bytes in length)\n"
+" Therefore, it can't be used as a 'history' file, only as a 'history.old'"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:283
+msgid ""
+"There is a history record already opened\n"
+"Clear data and load new one?"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:302
+msgid ""
+"There was an error reading the file, or it's size is smaller than expected"
+msgstr ""
+
+#: PS2_HistoryTweakerApp.cpp:37
+msgid "This language is not supported by the system."
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:236
+msgid "Welcome to..."
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:298
+msgid "not a proper size"
+msgstr ""
+
+#: PS2_HistoryTweakerMain.cpp:158
+msgid "padding"
+msgstr ""

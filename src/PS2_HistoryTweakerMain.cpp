@@ -7,6 +7,7 @@
  * License:
  **************************************************************/
 
+int LNGID;
 #include "PS2_HistoryTweakerMain.h"
 #include <wx/msgdlg.h>
 #include <errno.h>
@@ -104,7 +105,7 @@ BEGIN_EVENT_TABLE(PS2_HistoryTweakerFrame,wxFrame)
     //*)
 END_EVENT_TABLE()
 
-PS2_HistoryTweakerFrame::PS2_HistoryTweakerFrame(wxWindow* parent,wxWindowID id)
+PS2_HistoryTweakerFrame::PS2_HistoryTweakerFrame(wxWindow* parent, wxLocale& locale, wxWindowID id)
 {
     //(*Initialize(PS2_HistoryTweakerFrame)
     wxBoxSizer* BoxSizer1;
@@ -231,7 +232,7 @@ void PS2_HistoryTweakerFrame::OnQuit(wxCommandEvent& event)
 
 void PS2_HistoryTweakerFrame::OnAbout(wxCommandEvent& event)
 {
-    wxString msg = wxbuildinfo(long_f);
+    wxString msg = _("PS2 History Tweaker.\nCreated by Matias israelson (AKA: El_isra)\nThis software is free to use and open source:\nhttps://github.com/israpps/PS2-HistoryTweaker");
     wxMessageBox(msg, _("Welcome to..."));
 }
 
@@ -377,7 +378,10 @@ void PS2_HistoryTweakerFrame::OnentryEditRequest(wxCommandEvent& event)
 		EntryManager* ENT = new EntryManager(this);
 		ENT->feed_premade_struct(GLOBAL_HISTORY[itemIndex]);
 		if (ENT->ShowModal() == EM_USER_CHOSE_TO_SAVE_MODIFICATIONS)
+		{
+			memset(&GLOBAL_HISTORY[itemIndex], 0, sizeof GLOBAL_HISTORY[itemIndex]);
 			GLOBAL_HISTORY[itemIndex] = ENT->Spit_struct();
+		}
 
 		RepopulateList();
 	}
@@ -399,6 +403,7 @@ void PS2_HistoryTweakerFrame::OnSaveHistoryRequest(wxCommandEvent& event)
     	int fd, result, SIZEWRITTEN;
     	if ((fd = open(PATH.mb_str(), O_WRONLY | O_CREAT | O_TRUNC)) >= 0)
 		{
+#ifdef LOOPWRITE
     		for (int x=0; x < GLOBAL_HISTORY.size(); x++)
     		{
     			SIZEWRITTEN = write(fd, &GLOBAL_HISTORY[x], HISTORY_ENTRY_SIZE);
@@ -410,6 +415,19 @@ void PS2_HistoryTweakerFrame::OnSaveHistoryRequest(wxCommandEvent& event)
 					return;
 				}
     		}
+#else
+
+			SIZEWRITTEN = write(fd, GLOBAL_HISTORY.data(), (HISTORY_ENTRY_SIZE * GLOBAL_HISTORY.size()) );
+			result = (SIZEWRITTEN == (HISTORY_ENTRY_SIZE * GLOBAL_HISTORY.size())) ? 0 : -EIO;
+			if (result != 0)
+			{
+				wxMessageBox(_("An error ocurred while saving the new file"),_("FATAL ERROR"),wxICON_ERROR);
+				close(fd);
+				return;
+			} else {
+			std::cout << "successfully written \""<<PATH<<"\" with a size of ["<<SIZEWRITTEN<<"] bytes\n";
+			}
+#endif
     		close(fd);
     	} else {result = fd;}
 

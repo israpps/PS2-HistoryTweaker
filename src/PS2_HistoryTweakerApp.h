@@ -11,11 +11,14 @@
 #define PS2_HISTORYTWEAKERAPP_H
 
 #include <wx/app.h>
-
+#include "LNGTable.h"
 class PS2_HistoryTweakerApp : public wxApp
 {
     public:
         virtual bool OnInit();
+    protected:
+        wxLanguage m_lang = wxLANGUAGE_UNKNOWN;  // language specified by user
+        wxLocale m_locale;  // locale we'll be using
 };
 
 #endif // PS2_HISTORYTWEAKERAPP_H

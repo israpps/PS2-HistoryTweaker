@@ -116,6 +116,12 @@ void EntryManager::feed_premade_struct(HistoryEntry_t ENTRY)
 {
 	memset(&ENTRY_CONTAINER, 0x00, sizeof(ENTRY_CONTAINER));
 	ENTRY_CONTAINER = ENTRY;
+	LAUNCH_COUNT->SetValue(ENTRY.LaunchCount);
+	BITMASK->SetValue(ENTRY.bitmask);
+	PADDING->SetValue(ENTRY.padding);
+	SHIFT_AMMOUNT->SetValue(ENTRY.ShiftAmount);
+	Name->Clear();
+	Name->SetValue(ENTRY.name);
 }
 
 HistoryEntry_t EntryManager::Spit_struct(void)

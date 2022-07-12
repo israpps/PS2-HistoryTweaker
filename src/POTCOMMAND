@@ -1,0 +1,2 @@
+CPP_FILE_LIST=`find ./ -name '*.cpp' -print`
+xgettext -d app_name -s --keyword=_ -p ./ -o PS2-HistoryTweaker.pot $CPP_FILE_LIST
