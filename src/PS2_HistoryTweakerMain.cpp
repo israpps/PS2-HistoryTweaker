@@ -116,10 +116,10 @@ PS2_HistoryTweakerFrame::PS2_HistoryTweakerFrame(wxWindow* parent, wxLocale& loc
     wxMenuItem* MenuItem1;
     wxMenuItem* MenuItem2;
 
-    Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
+    Create(parent, id, _("PlayStation 2 History Tweaker"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     BoxSizer1 = new wxBoxSizer(wxVERTICAL);
     BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
-    EntryList = new wxListCtrl(this, ID_LISTCTRL1, wxDefaultPosition, wxSize(872,436), wxLC_REPORT|wxLC_ALIGN_LEFT|wxLC_SINGLE_SEL|wxLC_HRULES, wxDefaultValidator, _T("ID_LISTCTRL1"));
+    EntryList = new wxListCtrl(this, ID_LISTCTRL1, wxDefaultPosition, wxSize(872,436), wxLC_REPORT|wxLC_ALIGN_LEFT|wxLC_SINGLE_SEL|wxLC_HRULES|wxLC_VRULES, wxDefaultValidator, _T("ID_LISTCTRL1"));
     wxListItem col6;
     col6.SetId(COL_ENTRYNUMBER);
     col6.SetText( _("Entry number") );

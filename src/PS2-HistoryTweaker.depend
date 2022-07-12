@@ -1943,8 +1943,9 @@
 	"wx/defs.h"
 	"wx/window.h"
 
-1584205418 source:c:\users\usuario\documents\github\ps2-historytweaker\src\resource.rc
+1657592602 source:c:\users\usuario\documents\github\ps2-historytweaker\src\resource.rc
 	"wx/msw/wx.rc"
+	"version.h"
 
 1587560968 c:\__isra\__wx__\wxwidgets-3.0.5-x86\include\wx\msw\wx.rc
 	<windows.h>
@@ -1963,7 +1964,7 @@
 
 1587560968 c:\__isra\__wx__\wxwidgets-3.0.5-x86\include\wx\msw\rcdefs.h
 
-1657591083 source:c:\users\usuario\documents\github\ps2-historytweaker\src\ps2_historytweakermain.cpp
+1657592887 source:c:\users\usuario\documents\github\ps2-historytweaker\src\ps2_historytweakermain.cpp
 	"PS2_HistoryTweakerMain.h"
 	<wx/msgdlg.h>
 	<errno.h>
@@ -2271,7 +2272,7 @@
 	"wx/compositewin.h"
 	"wx/textctrl.h"
 
-1657590195 c:\users\usuario\documents\github\ps2-historytweaker\src\lngtable.h
+1657591858 c:\users\usuario\documents\github\ps2-historytweaker\src\lngtable.h
 	<wx/string.h>
 	<wx/language.h>
 	<wx/debug.h>
@@ -2305,4 +2306,6 @@
 1587560968 c:\__isra\__wx__\wxwidgets-3.0.5-x86\include\wx\base64.h
 	"wx/string.h"
 	"wx/buffer.h"
+
+1657592175 c:\users\usuario\documents\github\ps2-historytweaker\src\version.h
 

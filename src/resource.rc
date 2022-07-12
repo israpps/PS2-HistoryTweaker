@@ -1,3 +1,29 @@
 aaaa ICON "wx/msw/std.ico"
 
 #include "wx/msw/wx.rc"
+#include "version.h"
+
+1 VERSIONINFO
+FILEVERSION RC_FILEVERSION
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "040904E4"
+		 {
+			 VALUE "CompanyName", "Matías Israelson (AKA: El_isra)"
+			 VALUE "FileVersion", RC_FILEVERSION_STRING
+			 VALUE "FileDescription", "PlayStation2 History tweaker"
+			 VALUE "InternalName", "PS2HisTweaker"
+			 VALUE "LegalCopyright", " "
+			 VALUE "LegalTrademarks", " "
+			 VALUE "OriginalFilename", "PS2-HistoryTweaker.EXE"
+			 VALUE "ProductName", "PlayStation2 History tweaker"
+			 VALUE "ProductVersion", RC_FILEVERSION_STRING
+		 }
+	 }
+  BLOCK "VarFileInfo"
+	 {
+		 VALUE "Translation", 0x0409, 1252
+	 }
+}
