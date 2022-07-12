@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
 	<object class="wxFrame" name="PS2_HistoryTweakerFrame">
+		<title>PlayStation 2 History Tweaker</title>
 		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
 			<orient>wxVERTICAL</orient>
 			<object class="sizeritem">
@@ -9,7 +10,7 @@
 						<object class="wxListCtrl" name="ID_LISTCTRL1" variable="EntryList" member="yes">
 							<size>872,436</size>
 							<extra_code>wxListItem col6;&#x0A;col6.SetId(COL__ENTRYNUMBER);&#x0A;col6.SetText( __(&quot;Entry number&quot;) );&#x0A;col6.SetWidth(110);&#x0A;EntryList-&gt;InsertColumn(COL__ENTRYNUMBER, col6);&#x0A;&#x0A;wxListItem col0;&#x0A;col0.SetId(COL__ENTRY);&#x0A;col0.SetText( __(&quot;Entry&quot;) );&#x0A;col0.SetWidth(180);//180&#x0A;EntryList-&gt;InsertColumn(COL__ENTRY, col0);&#x0A;&#x0A;// Add second column&#x0A;wxListItem col1;&#x0A;col1.SetId(COL__COUNT);&#x0A;col1.SetText( __(&quot;Launch count&quot;) );&#x0A;col1.SetWidth(100);&#x0A;EntryList-&gt;InsertColumn(COL__COUNT, col1);&#x0A;&#x0A;// Add third column&#x0A;wxListItem col2;&#x0A;col2.SetId(COL__MASK);&#x0A;col2.SetText( __(&quot;BitMask&quot;) );&#x0A;col2.SetWidth(100);&#x0A;EntryList-&gt;InsertColumn(COL__MASK, col2);&#x0A;&#x0A;// Add 4th column&#x0A;wxListItem col3;&#x0A;col3.SetId(COL__SHIFT);&#x0A;col3.SetText( __(&quot;ShiftAmount&quot;) );&#x0A;col3.SetWidth(100);&#x0A;EntryList-&gt;InsertColumn(COL__SHIFT, col3);&#x0A;&#x0A;wxListItem col4;&#x0A;col4.SetId(COL__PADDING);&#x0A;col4.SetText( __(&quot;padding&quot;) );&#x0A;col4.SetWidth(100);&#x0A;EntryList-&gt;InsertColumn(COL__PADDING, col4);&#x0A;&#x0A;wxListItem col5;&#x0A;col5.SetId(COL__DATE);&#x0A;col5.SetText( __(&quot;Date&quot;) );&#x0A;col5.SetWidth(110);&#x0A;EntryList-&gt;InsertColumn(COL__DATE, col5);&#x0A;&#x0A;</extra_code>
-							<style>wxLC_REPORT|wxLC_ALIGN_LEFT|wxLC_SINGLE_SEL|wxLC_HRULES</style>
+							<style>wxLC_REPORT|wxLC_ALIGN_LEFT|wxLC_SINGLE_SEL|wxLC_HRULES|wxLC_VRULES</style>
 							<handler function="OnEntryListBeginDrag" entry="EVT_LIST_BEGIN_DRAG" />
 							<handler function="OnRefreshCounter" entry="EVT_LIST_DELETE_ITEM" />
 							<handler function="OnRefreshCounter" entry="EVT_LIST_DELETE_ALL_ITEMS" />

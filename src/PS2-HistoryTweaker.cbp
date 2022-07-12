@@ -7,7 +7,7 @@
 		<Option compiler="gnu_gcc_compiler_tdm-32bits" />
 		<Build>
 			<Target title="Debug">
-				<Option output="_build/Debug/PS2-HistoryTweaker" prefix_auto="1" extension_auto="1" />
+				<Option output="_build/Debug/PS2-HistoryTweaker-Debug" prefix_auto="1" extension_auto="1" />
 				<Option object_output="_obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gnu_gcc_compiler_tdm-32bits" />
@@ -54,18 +54,21 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-Wall" />
 			<Add option="-pipe" />
 			<Add option="-mthreads" />
 			<Add option="-D__GNUWIN32__" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add option="-Wall" />
 			<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/include" />
 		</Compiler>
 		<ResourceCompiler>
 			<Add directory="C:/__ISRA/__WX__/wxWidgets-3.0.5-x86/include" />
 		</ResourceCompiler>
 		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add option="-static" />
 			<Add option="-mthreads" />
 			<Add library="libkernel32.a" />
 			<Add library="libuser32.a" />
@@ -85,6 +88,7 @@
 		<Unit filename="EntryManager.h" />
 		<Unit filename="HistoryUtils.cpp" />
 		<Unit filename="HistoryUtils.h" />
+		<Unit filename="LNGTable.h" />
 		<Unit filename="PS2_HistoryTweakerApp.cpp" />
 		<Unit filename="PS2_HistoryTweakerApp.h" />
 		<Unit filename="PS2_HistoryTweakerMain.cpp" />
@@ -92,9 +96,16 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="version.h" />
 		<Unit filename="wxsmith/EntryManager.wxs" />
 		<Unit filename="wxsmith/PS2_HistoryTweakerframe.wxs" />
 		<Extensions>
+			<AutoVersioning>
+				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
+				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="0" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Changes_Log show_changes_editor="0" app_title="[v%M.%m.%b - Revision %r]" changeslog_path="_build\ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
+			</AutoVersioning>
 			<lib_finder disable_auto="1" />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="PS2_HistoryTweakerApp.cpp" main="PS2_HistoryTweakerFrame" init_handlers="necessary" language="CPP" />
