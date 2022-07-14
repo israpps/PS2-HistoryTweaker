@@ -118,7 +118,13 @@ CPMFindPackage(
     GIT_TAG v3.1.6
     EXCLUDE_FROM_ALL YES
 )
-
-add_executable(demo WIN32 main.cpp)
+include_directories("src")
+add_executable(demo WIN32 
+    "src/EntryManager.cpp"
+    "src/HistoryUtils.cpp"
+    "src/PS2_HistoryTweakerApp.cpp"
+    "src/PS2_HistoryTweakerMain.cpp"
+    "src/resource.rc"
+)
 # target_link_libraries(demo PRIVATE wx-widgets-test-compiler-options)
 target_link_libraries(demo PRIVATE wx::net wx::core wx::base)

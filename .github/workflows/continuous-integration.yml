@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     container: ${{ matrix.docker }}
     env:
-      BUILD_TYPE: Debug
+      BUILD_TYPE: Release
     strategy:
       fail-fast: false
       matrix:
