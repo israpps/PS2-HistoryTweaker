@@ -3,7 +3,7 @@
 
 #include <wx/string.h>
 #include <vector>
-
+#include <unistd.h>
 #define MAX_HISTORY_ENTRIES 21
 struct HistoryEntry_t
 {
